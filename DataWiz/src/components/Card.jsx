@@ -1,8 +1,12 @@
 const Card = ({heading, content}) => {
     return (
-        <div className="bg-transparent text-white flex flex-col p-9 m-2 shadow-[24px_12px_48px_rgba(1.5,0,0,0.7)] rounded-2xl transition-all duration-200 hover:scale-125 ease-out space-y-10 ">
-            <h1 className="text-xl font-semibold min-h-16">{heading}</h1>
-            <p className="text-lg italic">{content}</p>
+        <div className="bg-white text-black grid grid-cols-2 gap-32 items-center p-10 shadow-[24px_12px_48px_rgba(1.5,0,0,0.7)] rounded-2xl transition-all duration-200 hover:scale-105 ease-out space-y-10 w-full">
+            <h1 className="text-5xl font-semibold text-center">{heading}</h1>
+            <div>
+                 <p className="text-lg italic">{content}</p>
+                 <button className="bg-black my-4 px-6 py-3 text-white shadow-2xl rounded-xl font-semibold">Know More</button>
+            </div>
+           
         </div>
     )
 }

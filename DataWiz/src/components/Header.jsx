@@ -1,18 +1,20 @@
-import logo from "../assets/logo.jpeg";
+import { useNavigate } from "react-router-dom";
+import logo from "../assets/logo.png";
 const Header = () => {
+    const navigate = useNavigate();
     return (
-        <div className="relative z-20 w-full py-4 flex justify-between px-7 text-black shadow-2xl text-xl items-center">
-            <div className="flex flex-col items-center">
+        <div className="fixed z-30 w-full py-1 flex justify-between px-7 bg-white text-black border border-b-black border-t-0 border-r-0 border-l-0 shadow-2xl text-xl items-center">
+            <div className="flex items-center">
                 <img className="size-14 rounded-full animate-spin [animation-duration:4s]" src={logo} alt="Logo" />
-                {/* <h1 className="font-thin text-white bg-transparent p-2 rounded-lg shadow-2xl">
-                    DataWiz
-                </h1> */}
+                <h1 className="font-thin text-black bg-transparent p-2">
+                    DataWiz, NMIT
+                </h1>
             </div>
 
-            <div className="flex space-x-9 text-white">
-                <button>Home</button>
-                <button>About Us</button>
-                <button>Events</button>
+            <div className="flex space-x-9 text-black">
+                <button className="transition-all duration-150 rounded-2xl hover:border-4 hover:border-black px-4" onClick={() => {navigate('/home')}}>Home</button>
+                <button className="transition-all ease-in-out duration-150 rounded-2xl hover:border-4 hover:border-black px-4" onClick={() => {navigate('/home/events')}}>About Us</button>
+                <button className="transition-all ease-in-out duration-150 rounded-2xl hover:border-4 hover:border-black px-4" onClick={() => {navigate('/home/events')}}>Events</button>
             </div>
         </div>
     );
