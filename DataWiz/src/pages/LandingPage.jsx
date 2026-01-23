@@ -77,10 +77,10 @@ const LandingPage = () => {
                 <Wave />
             </div> */}
             <Header />
-            <main className="mx-auto max-w-7xl">
+            <main className="mx-auto lg:max-w-7xl">
                 <div className="max-w-7xl mx-auto pt-40 p-10 flex flex-col space-y-7 z-0">
                     <div>
-                        <h1 className="text-white text-7xl font-black">
+                        <h1 className="text-white text-5xl lg:text-7xl font-black">
                             <span className="">
                                 DATAWIZ{" "}
                                 <span className="text-[#c3c0da]">FAMILY</span>
