@@ -8,6 +8,7 @@ import group_photo from "../assets/group_photo.jpg";
 import JourneyCard from "../components/JourneyCard";
 import DomainCard from "../components/DomainCard";
 import CommunityCard from "../components/CommunityCard";
+import underline from "../assets/underline.png"
 
 const content = [
     {
@@ -77,7 +78,7 @@ const LandingPage = () => {
             </div> */}
             <Header />
             <main className="mx-auto">
-                <div className="max-w-7xl mx-auto pt-32 p-10 flex flex-col space-y-7 z-0">
+                <div className="max-w-7xl mx-auto pt-40 p-10 flex flex-col space-y-7 z-0">
                     <h1 className="text-white text-7xl font-black">
                         <span className="">DATAWIZ <span className="text-blue-600">FAMILY</span></span>
                     </h1>
