@@ -156,7 +156,7 @@ const LandingPage = () => {
                     </div>
                 </div>
                 <div className="text-black">
-                    <h1 className="text-4xl text-center font-bold ml-0 lg:ml-10 text-white">
+                    <h1 className="lg:text-5xl text-3xl mx-2 lg:mx-0 text-center font-bold ml-0 lg:ml-10 text-white">
                         Join Our Community
                     </h1>
                     <div className="grid lg:grid-cols-2 lg:grid-rows-none grid-cols-1 gap-20 mx-10 mt-5 mb-10">
