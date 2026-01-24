@@ -39,7 +39,7 @@ const tech_data = [
 ];
 
 const Teams = () => {
-    const [domain, setDomain] = useState('');
+    const [domain, setDomain] = useState('Tech');
     const [underline, setUnderline] = useState(false);
 
 
