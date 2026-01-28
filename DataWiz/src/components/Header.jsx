@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import logo from "../assets/logo.jpeg";
+import logo from "../assets/logo.jpg";
 import { useContext, useState } from "react";
 import hamburger from "../assets/hamburger.png";
 import { MyContext } from "../context/LoadingContext";
@@ -12,7 +12,7 @@ const Header = () => {
         <div className="fixed z-30 w-full lg:py-3 py-1 flex justify-between px-7 bg-[#160585] text-white border border-b-white  border-t-0 border-r-0 border-l-0 text-sm lg:text-xl items-center">
             <div className="flex items-center">
                 <img
-                    className="lg:size-14 size-8 rounded-full animate-none [animation-duration:4s]"
+                    className="lg:size-14 size-8 rounded-sm animate-none [animation-duration:4s]"
                     src={logo}
                     alt="Logo"
                 />

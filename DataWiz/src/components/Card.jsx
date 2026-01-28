@@ -14,7 +14,7 @@ const Card = ({ heading, content }) => {
                     </h1>
                     
                     <div className="flex flex-col lg:items-start items-center">
-                        <p>{content}</p>
+                        <p className="text-center lg:text-start">{content}</p>
                         <button
                             onClick={() => navigate("/events")}
                             className="bg-black my-4 px-6 py-3 text-white shadow-2xl rounded-xl font-semibold transition-all duration- hover:scale-105 lg:w-1/2"
