@@ -1,9 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.jpeg";
-import { useState } from "react";
-import hamburger from "../assets/hamburger.png"
+import { useContext, useState } from "react";
+import hamburger from "../assets/hamburger.png";
+import { MyContext } from "../context/LoadingContext";
 
 const Header = () => {
+    const { loading, setLoading } = useContext(MyContext);
     const navigate = useNavigate();
     const [show, setShow] = useState(false);
     return (
@@ -14,7 +16,9 @@ const Header = () => {
                     src={logo}
                     alt="Logo"
                 />
-                <h1 className="font-bold bg-transparent p-2 lg:text-lg text-xs">DATAWIZ, NMIT</h1>
+                <h1 className="font-bold bg-transparent p-2 lg:text-lg text-xs">
+                    DATAWIZ, NMIT
+                </h1>
             </div>
             <div className="">
                 <button
@@ -27,13 +31,21 @@ const Header = () => {
                 </button>
                 {console.log(show)}
                 {
-                    <div className={`absolute flex flex-col font-semibold bg-[#160585] items-start  -translate-x-4 gap-y-4 transition-all duration-200 rounded-xl border
+                    <div
+                        className={`absolute flex flex-col font-semibold bg-[#160585] items-start  -translate-x-4 gap-y-4 transition-all duration-200 rounded-xl border
                     ${show ? "opacity-100 traslate-y-8 mt-2 p-2" : "opacity-0 translate-y-0 pointer-events-none"}
-                    `}>
+                    `}
+                    >
                         <button
                             className="transition-all duration-150 rounded-2xl hover:border-4 ease-in-out hover:border-white px-4"
                             onClick={() => {
                                 navigate("/");
+                                setLoading((prev) => {
+                                    return {
+                                        button: true,
+                                        path: "/",
+                                    };
+                                });
                             }}
                         >
                             Home
@@ -42,6 +54,12 @@ const Header = () => {
                             className="transition-all ease-in-out duration-150 rounded-2xl hover:border-4 hover:border-white px-4"
                             onClick={() => {
                                 navigate("/Teams");
+                                setLoading((prev) => {
+                                    return {
+                                        button: true,
+                                        path: "Teams",
+                                    };
+                                });
                             }}
                         >
                             About Us
@@ -50,6 +68,12 @@ const Header = () => {
                             className="transition-all ease-in-out duration-150 rounded-2xl hover:border-4 hover:border-white px-4"
                             onClick={() => {
                                 navigate("/events");
+                                setLoading((prev) => {
+                                    return {
+                                        button: true,
+                                        path: "events",
+                                    };
+                                });
                             }}
                         >
                             Events
@@ -63,6 +87,12 @@ const Header = () => {
                     className="transition-all duration-150 rounded-2xl hover:border-4 ease-in-out hover:border-white px-4"
                     onClick={() => {
                         navigate("/");
+                        setLoading((prev) => {
+                            return {
+                                button: true,
+                                path: "/",
+                            };
+                        });
                     }}
                 >
                     Home
@@ -71,6 +101,12 @@ const Header = () => {
                     className="transition-all ease-in-out duration-150 rounded-2xl hover:border-4 hover:border-white px-4"
                     onClick={() => {
                         navigate("/Teams");
+                        setLoading((prev) => {
+                            return {
+                                button: true,
+                                path: "Teams",
+                            };
+                        });
                     }}
                 >
                     About Us
@@ -79,6 +115,12 @@ const Header = () => {
                     className="transition-all ease-in-out duration-150 rounded-2xl hover:border-4 hover:border-white px-4"
                     onClick={() => {
                         navigate("/events");
+                        setLoading((prev) => {
+                            return {
+                                button: true,
+                                path: "events",
+                            };
+                        });
                     }}
                 >
                     Events

@@ -9,6 +9,8 @@ import JourneyCard from "../components/JourneyCard";
 import DomainCard from "../components/DomainCard";
 import CommunityCard from "../components/CommunityCard";
 import underline from "../assets/underline.png";
+import { useContext } from "react";
+import {MyContext} from "../context/LoadingContext";
 
 const content = [
     {
@@ -71,6 +73,9 @@ const domainData = [
 ];
 
 const LandingPage = () => {
+    const { loading, setLoading } = useContext(MyContext)
+    const { button, path } = loading
+    console.log(`Button : ${button}`)
     return (
         <div id="teamsPage" className="relative min-h-screen">
             {/* <div className="mb-24 z-10">
@@ -120,8 +125,8 @@ const LandingPage = () => {
                         </p>
                     </div>
                     <div className="flex flex-col mx-auto gap-y-5 lg:mt-0 mt-5 lg:w-auto w-full">
-                        <Button button_name="Events" path="events" />
-                        <Button button_name="Team" path="Teams" />
+                        <Button button_name="Events" pathName="events" />
+                        <Button button_name="Team" pathName="Teams" />
                         <Button button_name="Gallery" />
                     </div>
                 </div>
