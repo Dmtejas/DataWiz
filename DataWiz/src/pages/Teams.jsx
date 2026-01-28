@@ -207,7 +207,7 @@ const Teams = () => {
     }
 
     return (
-        <div id="teamsPage" className="">
+        <div id="teamsPage" className="text-center lg:text-start">
             <Header />
             <div className="max-w-7xl mx-auto flex flex-col lg:gap-x-0 gap-x-10 gap-4 justify-center pt-40 p-10 text-white">
                 <h1 className="text-5xl font-bold">Our Team</h1>

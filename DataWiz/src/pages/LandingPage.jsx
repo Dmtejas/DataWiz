@@ -109,7 +109,7 @@ const LandingPage = () => {
                         Discover, Analyze, Conquer
                     </p>
                 </div>
-                <div className="z-20 bg-transparent max-w-6xl lg:max-w-7xl mx-auto hover:scale-105 transition-all duration-200 text-white rounded-3xl shadow-[24px_12px_48px_rgba(1.5,0,0,0.7)] p-10 flex lg:flex-row flex-col gap-y-2 mt-8">
+                <div className="z-20 bg-transparent max-w-xs lg:max-w-7xl mx-auto hover:scale-105 transition-all duration-200 text-white rounded-3xl shadow-[24px_12px_48px_rgba(1.5,0,0,0.7)] p-10 flex lg:flex-row flex-col gap-y-2 mt-8">
                     <div className="lg:w-1/2 w-full flex flex-col justify-center lg:items-start items-center space-y-2">
                         <h1 className="text-2xl font-semibold">
                             ABOUT DATAWIZ
