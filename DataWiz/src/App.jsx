@@ -6,6 +6,7 @@ import NotFound from "./pages/NotFound";
 import Teams from "./pages/Teams";
 import { Router, useRoutes } from "react-router-dom";
 import { MyContext } from "./context/LoadingContext";
+import RegisterPage from "./pages/RegisterPage";
 export default function App() {
     const {loading, setLoading} = useContext(MyContext)
     const { button, path } = loading;
@@ -28,6 +29,10 @@ export default function App() {
             {
                 path: "/Loading",
                 element: <Loading />
+            },
+            {
+                path: "/Register/:id",
+                element: <RegisterPage />
             },
             {
                 path: "*",

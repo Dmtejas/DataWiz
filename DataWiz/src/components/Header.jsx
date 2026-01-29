@@ -29,7 +29,6 @@ const Header = () => {
                 >
                     <img className="w-12" src={hamburger} alt="hamburger" />
                 </button>
-                {console.log(show)}
                 {
                     <div
                         className={`absolute flex flex-col font-semibold bg-[#160585] items-start  -translate-x-4 gap-y-4 transition-all duration-200 rounded-xl border
@@ -80,7 +79,6 @@ const Header = () => {
                         </button>
                     </div>
                 }
-                {console.log(show)}
             </div>
             <div className="hidden md:flex space-x-9 font-semibold">
                 <button
