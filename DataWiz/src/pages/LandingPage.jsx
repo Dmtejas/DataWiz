@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import Wave from "../components/wave";
 import Card from "../components/Card";
 import logo from "../assets/logo.jpeg";
-import group_photo from "../assets/group_photo.jpg";
+import group_photo from "../assets/GroupPhoto.jpeg";
 import JourneyCard from "../components/JourneyCard";
 import DomainCard from "../components/DomainCard";
 import CommunityCard from "../components/CommunityCard";
@@ -130,9 +130,9 @@ const LandingPage = () => {
                         <Button button_name="Gallery" />
                     </div>
                 </div>
-                <div className="m-10 max-w-7xl mx-auto flex items-center justify-center shadow-[24px_12px_48px_rgba(1.5,0,0,0.7)]">
+                <div className="m-10 max-w-xs lg:max-w-7xl mx-auto flex items-center justify-center shadow-[24px_12px_48px_rgba(1.5,0,0,0.7)]">
                     <img
-                        className="size-2/3 m-10 rounded-e-3xl"
+                        className="size-3/4 w-full m-2 lg:m-10 lg:rounded-e-3xl"
                         src={group_photo}
                         alt="Group photo"
                     />

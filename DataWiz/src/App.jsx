@@ -7,6 +7,7 @@ import Teams from "./pages/Teams";
 import { Router, useRoutes } from "react-router-dom";
 import { MyContext } from "./context/LoadingContext";
 import RegisterPage from "./pages/RegisterPage";
+import AdminLogin from "./pages/adminLogin";
 export default function App() {
     const {loading, setLoading} = useContext(MyContext)
     const { button, path } = loading;
@@ -33,6 +34,10 @@ export default function App() {
             {
                 path: "/Register/:id",
                 element: <RegisterPage />
+            },
+            {
+                path: "/admin-datawiz",
+                element: <AdminLogin />
             },
             {
                 path: "*",
