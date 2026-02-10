@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import Header from "../components/Header";
-import LoginInput from "../components/loginInput";
+import LoginInput from "../components/LoginInput";
 import GlobalContext from "../context/GlobalContext";
 import RegistrationDetails from "./RegistrationDetails";
 import { MyContext } from "../context/LoadingContext";
