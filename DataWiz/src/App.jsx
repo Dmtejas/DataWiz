@@ -7,7 +7,7 @@ import Teams from "./pages/Teams";
 import { Router, useRoutes } from "react-router-dom";
 import { MyContext } from "./context/LoadingContext";
 import RegisterPage from "./pages/RegisterPage";
-import AdminLogin from "./pages/adminLogin.jsx";
+import AdminLogin from "./pages/Login.jsx";
 import RegistrationDetails from "./pages/RegistrationDetails";
 import Unauthorized from "./components/Unauthorized";
 export default function App() {
