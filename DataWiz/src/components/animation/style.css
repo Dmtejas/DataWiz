@@ -1,6 +1,8 @@
 #core-members {
     -webkit-animation: slit-in-vertical 0.7s ease-out both;
 	        animation: slit-in-vertical 0.7s ease-out both;
+
+    font-family:cursive
 }
 
 #teamsPage {
