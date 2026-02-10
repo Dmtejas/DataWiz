@@ -23,7 +23,7 @@ dbConnection();
 app.use('/api/registrations', router)
 
 //Admin Login middleware
-app.use('/api/login', userRouter)
+app.use('/api/admin', userRouter)
 //Centralized Error Handler
 app.use(errorHandler)
 //SPA callback

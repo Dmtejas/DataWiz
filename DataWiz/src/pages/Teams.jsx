@@ -209,7 +209,7 @@ const Teams = () => {
     return (
         <div id="teamsPage" className="text-center lg:text-start">
             <Header />
-            <div className="max-w-7xl mx-auto flex flex-col lg:gap-x-0 gap-x-10 gap-4 justify-center pt-40 p-10 text-white">
+            <div className="max-w-7xl mx-auto flex flex-col lg:gap-x-0 gap-x-10 gap-4 justify-center pt-20 p-10 text-white">
                 <h1 className="text-5xl font-bold">Our Team</h1>
                 <p className="text-xl text-gray-400">
                     Behind every initiative of the club is a team driven by

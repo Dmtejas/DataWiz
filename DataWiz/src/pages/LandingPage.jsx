@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import Wave from "../components/wave";
 import Card from "../components/Card";
 import logo from "../assets/logo.jpeg";
-import group_photo from "../assets/group_photo.jpg";
+import group_photo from "../assets/GroupPhoto.jpeg";
 import JourneyCard from "../components/JourneyCard";
 import DomainCard from "../components/DomainCard";
 import CommunityCard from "../components/CommunityCard";
@@ -83,12 +83,12 @@ const LandingPage = () => {
             </div> */}
             <Header />
             <main className="mx-auto lg:max-w-7xl">
-                <div className="max-w-7xl mx-auto pt-40 p-10 flex flex-col space-y-7 z-0 items-center lg:items-start">
+                <div className="max-w-7xl mx-auto pt-20 p-10 flex flex-col space-y-7 z-0 items-center lg:items-start">
                     <div>
-                        <h1 id="core-members" className="text-white text-5xl lg:text-7xl font-black lg:text-start text-center">
+                        <h1 id="core-members" className="text-white text-5xl lg:text-[100px] font-black lg:text-start text-center">
                             <span className="">
-                                DATAWIZ{" "}
-                                <span className="text-[#c3c0da]">FAMILY</span>
+                                WE ARE,{" "} <br></br>
+                                <span className="text-[#c3c0da]">DATAWIZ</span>
                             </span>
                         </h1>
                         <img
@@ -130,9 +130,9 @@ const LandingPage = () => {
                         <Button button_name="Gallery" />
                     </div>
                 </div>
-                <div className="m-10 max-w-7xl mx-auto flex items-center justify-center shadow-[24px_12px_48px_rgba(1.5,0,0,0.7)]">
+                <div className="m-10 max-w-xs lg:max-w-7xl mx-auto flex items-center justify-center shadow-[24px_12px_48px_rgba(1.5,0,0,0.7)]">
                     <img
-                        className="size-2/3 m-10 rounded-e-3xl"
+                        className="size-3/4 w-full m-2 lg:m-10 lg:rounded-e-3xl"
                         src={group_photo}
                         alt="Group photo"
                     />
