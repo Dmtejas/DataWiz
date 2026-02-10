@@ -10,7 +10,7 @@ const initialFormData = {
     password: "",
 };
 
-const AdminLogin = () => {
+const adminLogin = () => {
     const { loading, setLoading } = useContext(MyContext);
     const { button, path } = loading;
     const [formData, setFormData] = useState(initialFormData);
@@ -106,4 +106,4 @@ const AdminLogin = () => {
     );
 };
 
-export default AdminLogin;
+export default adminLogin;
