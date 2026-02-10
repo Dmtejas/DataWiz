@@ -83,12 +83,12 @@ const LandingPage = () => {
             </div> */}
             <Header />
             <main className="mx-auto lg:max-w-7xl">
-                <div className="max-w-7xl mx-auto pt-40 p-10 flex flex-col space-y-7 z-0 items-center lg:items-start">
+                <div className="max-w-7xl mx-auto pt-20 p-10 flex flex-col space-y-7 z-0 items-center lg:items-start">
                     <div>
-                        <h1 id="core-members" className="text-white text-5xl lg:text-7xl font-black lg:text-start text-center">
+                        <h1 id="core-members" className="text-white text-5xl lg:text-[100px] font-black lg:text-start text-center">
                             <span className="">
-                                DATAWIZ{" "}
-                                <span className="text-[#c3c0da]">FAMILY</span>
+                                WE ARE,{" "} <br></br>
+                                <span className="text-[#c3c0da]">DATAWIZ</span>
                             </span>
                         </h1>
                         <img

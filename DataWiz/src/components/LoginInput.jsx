@@ -26,6 +26,7 @@ const LoginInput = ({ label, name, value, setFormData}) => {
             name={name}
             value={value}
             onChange={handleChange}
+            required
             />
         </div>
     );

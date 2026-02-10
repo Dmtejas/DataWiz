@@ -1,7 +1,11 @@
 import Header from "./Header";
 import unauthorized from "../assets/unauthorized.jpg";
+import { useNavigate } from "react-router-dom";
 
 const Unauthorized = () => {
+
+    const navigate = useNavigate();
+
     return (
         <div className="min-h-screen">
             <Header />
@@ -19,7 +23,7 @@ const Unauthorized = () => {
                         requires valid authentication or higher access
                         privileges.
                     </p>
-                    <button className="w-1/3 py-2 rounded-2xl bg-white text-black shadow-2xl hover:scale-110 transition-all duration-300 hover:bg-black hover:text-white font-semibold">
+                    <button onClick={() => navigate('/')} className="w-1/3 py-2 rounded-2xl bg-white text-black shadow-2xl hover:scale-110 transition-all duration-300 hover:bg-black hover:text-white font-semibold">
                         Back to home
                     </button>
                 </div>
