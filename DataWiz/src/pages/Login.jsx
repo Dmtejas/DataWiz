@@ -4,6 +4,7 @@ import LoginInput from "../components/LoginInput";
 import GlobalContext from "../context/GlobalContext";
 import RegistrationDetails from "./RegistrationDetails";
 import { MyContext } from "../context/LoadingContext";
+import admin from '../assets/admin.png'
 
 const initialFormData = {
     email: "",
@@ -43,12 +44,12 @@ const Login = () => {
         formDataSubmit();
 
         const resolveError = () => {
-            if(error) {
-                return "dashboard"
+            if (error) {
+                return "dashboard";
             } else {
-                return "unauthorized"
+                return "unauthorized";
             }
-        }
+        };
 
         setLoading((prevData) => {
             return {
@@ -62,33 +63,38 @@ const Login = () => {
     return (
         <div className="min-h-screen">
             <Header />
-            <div className="max-w-xs lg:max-w-xl mx-auto py-64 lg:py-28">
+            <div className="max-w-xs lg:max-w-6xl mx-auto py-20 lg:py-20">
                 <form
-                    className="bg-transparent border-4 shadow-[24px_12px_48px_rgba(255,255,255,0.2)] p-4 lg:p-28 flex flex-col items-center gap-y-8 lg:rounded-full"
+                    className="bg-transparent shadow-[24px_12px_48px_rgba(255,255,255,0.2)] p-4 lg:p-28 flex lg:flex-row flex-col items-center gap-y-8 lg:gap-x-20 lg:rounded-3xl lg:justify-center border"
                     onSubmit={handleSubmit}
                 >
-                    <h1 className="text-4xl font-serif">ADMIN LOGIN</h1>
-                    <LoginInput
-                        label="Email : "
-                        name="email"
-                        value={formData.email}
-                        setFormData={setFormData}
-                    />
-                    <LoginInput
-                        label="Password : "
-                        name="password"
-                        value={formData.password}
-                        setFormData={setFormData}
-                    />
-                    <button
-                        className="
+                    <div className="flex flex-col items-center justify-center w-full gap-y-5">
+                        <img src={admin} className="rounded-full" alt="" />
+                        <h1 className="text-4xl font-light text-center ">Admin Control Center</h1>
+                        <p className="text-center font-thin">Access the dashboard to manage data, monitor activity, and maintain system integrity</p>
+                    </div>
+                    
+                    <div className="flex flex-col gap-y-6 items-center border py-20 p-8 lg:p-20 rounded-2xl w-full bg-sky-600">
+                        <LoginInput
+                            label="Email : "
+                            name="email"
+                            value={formData.email}
+                            setFormData={setFormData}
+                        />
+                        <LoginInput
+                            label="Password : "
+                            name="password"
+                            value={formData.password}
+                            setFormData={setFormData}
+                        />
+                        <button
+                            className="
                     w-1/2
                     py-2
                     rounded-2xl
                     bg-white
                     text-black
-                    font-semibold
-                    font-serif
+                    font-light
                     text-md
                     hover:scale-110
                     transition-all
@@ -96,10 +102,11 @@ const Login = () => {
                     hover:bg-black
                     hover:text-white
                 "
-                        type="/submit"
-                    >
-                        Log in
-                    </button>
+                            type="/submit"
+                        >
+                            Log in
+                        </button>
+                    </div>
                 </form>
             </div>
         </div>

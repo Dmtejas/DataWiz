@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import logo from "../assets/logo.jpeg";
+import logo from "../assets/nitte_logo_1.png";
 import { useContext, useState } from "react";
 import hamburger from "../assets/hamburger.png";
 import { MyContext } from "../context/LoadingContext";
@@ -9,16 +9,16 @@ const Header = () => {
     const navigate = useNavigate();
     const [show, setShow] = useState(false);
     return (
-        <div className=" z-30 w-full lg:py-3 py-1 flex justify-between px-7 bg-transparent text-white border border-b-0  border-t-0 border-r-0 border-l-0 text-sm lg:text-xl items-center">
+        <div className=" z-30 w-full lg:py-3 py-1 flex justify-between px-7 bg-transparent text-black border border-b-0  border-t-0 border-r-0 border-l-0 text-sm lg:text-xl items-center">
             <div className="flex items-center">
                 <img
-                    className="lg:size-14 size-8 rounded-full animate-none [animation-duration:4s]"
+                    className="lg:size-36 lg:h-16 rounded-xl size-8 animate-none [animation-duration:4s]"
                     src={logo}
                     alt="Logo"
                 />
-                <h1 className="font-thin bg-transparent p-2 lg:text-lg text-xs">
+                {/* <h1 className="font-normal bg-transparent p-2 lg:text-lg text-xs">
                     DATAWIZ, NMIT
-                </h1>
+                </h1> */}
             </div>
             <div className="">
                 <button
@@ -80,7 +80,7 @@ const Header = () => {
                     </div>
                 }
             </div>
-            <div className="hidden md:flex space-x-9 font-thin lg:text-xl text-white">
+            <div className="hidden md:flex space-x-9 font-normal lg:text-xl text-black">
                 <button
                     className="transition-all duration-150 rounded-2xl hover:border-4 ease-in-out hover:border-white px-4"
                     onClick={() => {
