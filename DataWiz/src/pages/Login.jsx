@@ -2,7 +2,6 @@ import { useContext, useState } from "react";
 import Header from "../components/Header";
 import LoginInput from "../components/LoginInput";
 import GlobalContext from "../context/GlobalContext";
-import RegistrationDetails from "./RegistrationDetails";
 import { MyContext } from "../context/LoadingContext";
 import admin from '../assets/admin.png'
 
@@ -15,10 +14,13 @@ const Login = () => {
     const { loading, setLoading } = useContext(MyContext);
     const { button, path } = loading;
     const [formData, setFormData] = useState(initialFormData);
-    const [jwt, setJwt] = useState("");
-    const [error, setError] = useState(false);
+    const [status, setStatus] = useState(404);
+    // const [error, setError] = useState(false);
+
+
     const formDataSubmit = async () => {
         const apiResponse = await fetch("/api/admin/login", {
+            credentials: `include`,
             method: "POST",
             headers: {
                 "Content-type": "application/json",
@@ -27,24 +29,16 @@ const Login = () => {
         });
 
         if (!apiResponse.ok) {
-            setError(true);
+            setStatus(404);
             console.log("Api response is not ok");
         }
 
-        const jwtToken = await apiResponse.json();
-        setJwt(jwtToken);
-        console.log(jwtToken);
-    };
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-
-        console.log(formData);
-
-        formDataSubmit();
+        const message = await apiResponse.json();
+        setStatus(apiResponse.status);
+        console.log(`Message : ${message.message} Status : ${apiResponse.status}`);
 
         const resolveError = () => {
-            if (error) {
+            if (apiResponse.status === 200) {
                 return "dashboard";
             } else {
                 return "unauthorized";
@@ -60,10 +54,19 @@ const Login = () => {
         });
     };
 
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        console.log(formData);
+
+        formDataSubmit();
+    };
+
     return (
         <div className="min-h-screen">
             <Header />
-            <div className="max-w-xs lg:max-w-6xl mx-auto py-20 lg:py-20">
+            <div className="max-w-xs lg:max-w-6xl mx-auto py-10 lg:py-10">
                 <form
                     className="bg-transparent shadow-[24px_12px_48px_rgba(255,255,255,0.2)] p-4 lg:p-28 flex lg:flex-row flex-col items-center gap-y-8 lg:gap-x-20 lg:rounded-3xl lg:justify-center border"
                     onSubmit={handleSubmit}

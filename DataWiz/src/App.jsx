@@ -8,8 +8,8 @@ import { Router, useRoutes } from "react-router-dom";
 import { MyContext } from "./context/LoadingContext";
 import RegisterPage from "./pages/RegisterPage";
 import AdminLogin from "./pages/Login.jsx";
-import RegistrationDetails from "./pages/RegistrationDetails";
 import Unauthorized from "./components/Unauthorized";
+import Dashboard from "./pages/Dashboard.jsx";
 export default function App() {
     const {loading, setLoading} = useContext(MyContext)
     const { button, path } = loading;
@@ -43,7 +43,7 @@ export default function App() {
             },
             {
                 path: "/dashboard",
-                element: <RegistrationDetails />
+                element: <Dashboard />
             },
             {
                 path: "/unauthorized",

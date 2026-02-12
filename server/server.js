@@ -1,13 +1,15 @@
 import express from 'express'
 import dotenv from 'dotenv'
+dotenv.config()
 import path from 'path'
 import { fileURLToPath } from 'url';
 import { router } from './routes/registrationRoute.js';
 import { errorHandler } from './middleware/errorHandler.js';
 import { dbConnection } from './config/dbConnection.js';
 import { userRouter } from './routes/userRoutes.js';
+import sessionHandler from './middleware/sessionHandler.js';
 
-dotenv.config()
+
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename);
@@ -18,6 +20,9 @@ app.use(express.json())
 
 //Database Connection
 dbConnection();
+
+//Session middleware
+app.use(sessionHandler);
 
 //Registration middleware
 app.use('/api/registrations', router)

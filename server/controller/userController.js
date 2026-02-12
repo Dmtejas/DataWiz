@@ -1,42 +1,33 @@
 import { userModel } from "../model/userModel.js";
 import expressAsyncHandler from "express-async-handler";
+import { registrationModel } from "../model/registrationModel.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
 const loginHandler = expressAsyncHandler(async (req, res) => {
     const { email, password } = req.body;
-    if (!email || !password) {
+    if(!email || !password) {
         res.status(400);
         throw new Error(`All fields are mandatory`);
     }
 
     const user = await userModel.findOne({ email });
-    if (!user) {
+    if(!user) {
         res.status(400);
-        throw new Error("User doesn't exist, Register first");
+        throw new Error(`User doesn't exist`);
     }
 
-    const isMatch = await bcrypt.compare(password, user.password);
-
-    if (!isMatch) {
+    const isMatching = await bcrypt.compare(password, user.password);
+    if(!isMatching) {
         res.status(401);
-        throw new Error("Invalid credentials");
+        throw new Error(`Authentication failed, Invalid username or password`);
     }
 
-    const token = jwt.sign(
-        {
-            email,
-            role: "admin",
-        },
-        process.env.ACCESS_TOKEN,
-        { expiresIn: "2m" },
-    );
-
-    if (!token) {
-        res.status(400);
-        throw new Error(`Error in setting up JWT`);
+    req.session.user = {
+        email: email
     }
-    res.status(200).json(token);
+
+    res.status(200).json({message: 'Login successfull'});
 });
 
 const registerHandler = expressAsyncHandler(async (req, res) => {
@@ -65,4 +56,15 @@ const registerHandler = expressAsyncHandler(async (req, res) => {
     });
 });
 
-export { loginHandler, registerHandler };
+
+const dashboard = expressAsyncHandler( async (req, res) => {
+    const getRegistration = await registrationModel.find();
+    if(!getRegistration) {
+        res.status(500);
+        throw new Error("Error creating the registration")
+    }
+    res.status(200);
+    res.json(getRegistration)
+} )
+
+export { loginHandler, registerHandler, dashboard };
