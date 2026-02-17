@@ -6,13 +6,13 @@ body {
     color: white;
     /* background-image: url("./assets/background25.png"); */
     /* background-color:midnightblue; */
-    background: #020024; 
+    /* background: #020024; 
     background: linear-gradient(
         90deg,
         rgb(48, 196, 232) 0%,
         rgb(46, 148, 231) 35%,
         rgba(0, 212, 255, 1) 100%
-    );
+    ); 
     /* background: #000000;
     background: radial-gradient(
         circle,
@@ -20,6 +20,15 @@ body {
         rgba(135, 131, 131, 1) 100%
     ); */
     /* background-color: black; */
+    /* background: linear-gradient(to right, #0f172a, #334155); */
+    /* background: linear-gradient(to right, #1e40af, #312e81); */
+ background: linear-gradient(
+        90deg,
+        rgb(48, 196, 232) 0%,
+        rgb(46, 148, 231) 35%,
+        rgba(0, 212, 255, 1) 100%
+    ); 
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

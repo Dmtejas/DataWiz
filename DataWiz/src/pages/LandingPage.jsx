@@ -10,7 +10,8 @@ import DomainCard from "../components/DomainCard";
 import CommunityCard from "../components/CommunityCard";
 import underline from "../assets/underline.png";
 import { useContext } from "react";
-import {MyContext} from "../context/LoadingContext";
+import { MyContext } from "../context/LoadingContext";
+import { motion } from "framer-motion";
 
 const content = [
     {
@@ -73,9 +74,9 @@ const domainData = [
 ];
 
 const LandingPage = () => {
-    const { loading, setLoading } = useContext(MyContext)
-    const { button, path } = loading
-    console.log(`Button : ${button}`)
+    const { loading, setLoading } = useContext(MyContext);
+    const { button, path } = loading;
+    console.log(`Button : ${button}`);
     return (
         <div id="teamsPage" className="relative min-h-screen">
             {/* <div className="mb-24 z-10">
@@ -85,9 +86,12 @@ const LandingPage = () => {
             <main className="mx-auto lg:max-w-7xl">
                 <div className="max-w-7xl mx-auto pt-2 p-4 lg:p-10 lg:pt-0 flex flex-col lg:flex-row lg:space-y-0 z-0 items-center lg:items-center lg:justify-start">
                     <div className="lg:max-w-2xl">
-                        <h1 id="core-members" className="text-white text-5xl lg:text-[150px] font-black lg:text-start text-center">
+                        <h1
+                            id="core-members"
+                            className="text-white text-5xl lg:text-[150px] font-black lg:text-start text-center"
+                        >
                             <span className="">
-                                WE ARE,{" "} <br></br>
+                                WE ARE, <br></br>
                                 <span className="text-black">DATAWIZ</span>
                             </span>
                         </h1>
@@ -98,28 +102,48 @@ const LandingPage = () => {
                         /> */}
                     </div>
 
-                    <div className="">
-                        <img
-                            className=" rounded-2xl"
-                            src={logo}
-                            alt="logo"
-                        />
-                    </div>
-                    
+                    <motion.div className="">
+                        <img className=" rounded-2xl" src={logo} alt="logo" />
+                    </motion.div>
                 </div>
-                <div className="z-20 bg-transparent max-w-xs lg:max-w-7xl mx-auto hover:scale-105 transition-all duration-200 text-white rounded-3xl shadow-[24px_12px_48px_rgba(1.5,0,0,0.7)] p-10 flex lg:flex-row flex-col gap-y-2 mt-8">
+                <motion.div
+                    variants={{
+                        hidden: {
+                            opacity: 0,
+                            x: 120,
+                            rotate: 20,
+                            scale: 0.98,
+                        },
+                        visible: {
+                            opacity: 1,
+                            x: 0,
+                            rotate: 0,
+                            scale: 1,
+                            transition: {
+                                duration: 0.7,
+                                ease: [0.22, 1, 0.36, 1], // premium easing curve
+                            },
+                        },
+                    }}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-150px" }}
+                    className="z-20 bg-white max-w-xs lg:max-w-7xl mx-auto hover:scale-105 duration-200 text-black shadow-[24px_12px_48px_rgba(1.5,0,0,0.7)] p-10 flex lg:flex-row flex-col gap-y-2 mt-8"
+                >
                     <div className="lg:w-1/2 w-full flex flex-col justify-center lg:items-start items-center space-y-2">
                         <h1 className="text-lg lg:text-2xl font-semibold">
                             ABOUT DATAWIZ
                         </h1>
                         <p className="text-xs lg:text-lg text-center lg:text-start">
                             DataWiz is a technical club focused on data-driven
-                            technologies and real-world problem solving. <span className="">We
-                            explore domains like Data Science, Machine Learning,
-                            Web Development, and Analytics through hands-on
-                            projects, workshops, and events. Our goal is to help
-                            students build practical skills beyond the
-                            classroom.</span>
+                            technologies and real-world problem solving.{" "}
+                            <span className="">
+                                We explore domains like Data Science, Machine
+                                Learning, Web Development, and Analytics through
+                                hands-on projects, workshops, and events. Our
+                                goal is to help students build practical skills
+                                beyond the classroom.
+                            </span>
                         </p>
                     </div>
                     <div className="flex flex-col mx-auto gap-y-2 lg:gap-y-5 lg:mt-0 mt-5 lg:w-auto w-full">
@@ -127,7 +151,7 @@ const LandingPage = () => {
                         <Button button_name="Team" pathName="Teams" />
                         <Button button_name="Gallery" />
                     </div>
-                </div>
+                </motion.div>
                 <div className="m-10 max-w-xs lg:max-w-7xl mx-auto flex items-center justify-center shadow-[24px_12px_48px_rgba(1.5,0,0,0.7)]">
                     <img
                         className="size-3/4 w-full m-2 lg:m-10 lg:rounded-e-3xl"
@@ -135,7 +159,27 @@ const LandingPage = () => {
                         alt="Group photo"
                     />
                 </div>
-                <div className="relative flex flex-col mt-10 p-10 rounded-2xl max-w-screen-2xl mx-auto space-y-8 bg-transparent">
+                <motion.div variants={{
+                        hidden: {
+                            opacity: 0,
+                            x: 120,
+                            rotate: 20,
+                            scale: 0.98,
+                        },
+                        visible: {
+                            opacity: 1,
+                            x: 0,
+                            rotate: 0,
+                            scale: 1,
+                            transition: {
+                                duration: 0.7,
+                                ease: [0.22, 1, 0.36, 1], // premium easing curve
+                            },
+                        },
+                    }}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-300px" }} className="relative flex flex-col mt-10 p-10 rounded-2xl max-w-screen-2xl mx-auto space-y-8 bg-transparent">
                     <h1 className="ml-3 text-center text-3xl lg:text-5xl font-semibold text-white">
                         Upcoming Events
                     </h1>
@@ -145,7 +189,7 @@ const LandingPage = () => {
                             content="Experience a day full of innovation, creativity, and collaboration. Join a community of builders to explore ideas, take on exciting challenges, and showcase your skills in an inspiring environment."
                         />
                     </div>
-                </div>
+                </motion.div>
                 <div className="relative z-20 flex flex-col mt-10 p-2 lg:p-10 rounded-2xl max-w-screen-2xl mx-auto space-y-8 bg-transparent">
                     <h1 className="ml-3 text-3xl lg:text-5xl font-semibold text-white text-center">
                         Domains
@@ -153,7 +197,9 @@ const LandingPage = () => {
                     <DomainCard data={domainData} />
                 </div>
                 <div className="max-w-md lg:max-w-7xl mx-auto m-14 text-white flex lg:flex-row flex-col justify-center items-center lg:space-x-28 shadow-[0_8px_30px_rgba(255,255,255,0.2)] lg:p-20 p-2 lg:rounded-s-full gap-y-10 lg:gap-y-0">
-                    <h1 className="lg:text-6xl text-2xl font-bold">Our Journey ➨</h1>
+                    <h1 className="lg:text-6xl text-2xl font-bold">
+                        Our Journey ➨
+                    </h1>
                     <div className="shadow-[0_8px_30px_rgba(255,255,255,0.2)] p-2 lg:p-20 rounded-e-3xl flex flex-col space-y-5 transition-all duration-150 hover:scale-105 w-full">
                         <JourneyCard content={content} />
                     </div>
