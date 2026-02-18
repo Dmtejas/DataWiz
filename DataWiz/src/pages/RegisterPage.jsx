@@ -82,12 +82,12 @@ const RegisterPage = () => {
     return (
         <div id="teamsPage">
             <Header />
-            <h1 className="text-center pt-20 lg:pt-32 text-3xl lg:text-5xl font-semibold">
+            <h1 className="text-center pt-10 lg:pt-10 text-3xl lg:text-5xl font-semibold text-black">
                 Enter your details:{" "}
             </h1>
             <form
                 onSubmit={handleSubmit}
-                className="shadow-[0_8px_30px_rgba(255,255,255,0.2)] max-w-xs lg:max-w-4xl mx-auto mt-6 p-6 lg:p-6 flex flex-col rounded-2xl lg:rounded-2xl border-2 mb-20"
+                className="border-2 border-black max-w-xs lg:max-w-4xl mx-auto mt-6 p-6 lg:p-6 flex flex-col rounded-2xl lg:rounded-2xl mb-20"
             >
                 <div className="flex gap-x-4">
                     <InputForForm
@@ -151,7 +151,7 @@ const RegisterPage = () => {
                 <button
                     type="submit"
                     onClick={handleClick}
-                    className="rounded-xl bg-white text-black lg:text-lg font-semibold py-2 lg:py-2 px-10 mx-auto my-5 transition-all duration-300 hover:scale-105 hover:bg-black hover:text-white w-1/2"
+                    className="rounded-xl bg-white text-black lg:text-lg font-semibold py-2 lg:py-2 px-10 mx-auto my-5 transition-all duration-300 hover:scale-105 hover:bg-black hover:text-white w-1/2 border-2 border-black"
                 >
                     Submit details
                 </button>

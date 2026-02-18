@@ -21,10 +21,10 @@ const TeamCard = () => {
     ];
 
     return (
-        <div className="grid lg:grid-cols-3 lg:grid-rows-none grid-cols-1 min-h-40 mt-10 lg:mx-10 text-white lg:w-auto w-full">
+        <div className="grid lg:grid-cols-3 lg:grid-rows-none grid-cols-1 min-h-40 mt-10 lg:mx-10 text-black lg:w-auto w-full">
             {leaders.map((element, index) => {
                 return (
-                    <div id="core-members" className="flex flex-col items-center justify-between m-7 p-8 gap-y-10 shadow-[24px_12px_48px_rgba(1.5,0,0,0.7)] hover:scale-110 transition-all duration-300 hover:shadow-[0_8px_30px_rgba(255,255,255,0.2)] rounded-3xl">
+                    <div id="core-members" className="flex flex-col items-center justify-between m-7 p-8 gap-y-10 border-2 border-black hover:scale-110 transition-all duration-300 hover:shadow-[0_8px_30px_rgba(255,255,255,0.2)] rounded-3xl">
                         <img
                             className="size-56 rounded-full"
                             src={element.image}

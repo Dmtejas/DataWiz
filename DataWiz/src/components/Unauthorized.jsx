@@ -7,7 +7,7 @@ const Unauthorized = () => {
     const navigate = useNavigate();
 
     return (
-        <div className="min-h-screen">
+        <div className="min-h-screen text-black">
             <Header />
             <div className="max-w-xs lg:max-w-5xl mx-auto pt-14 lg:pt-14 pb-20 flex lg:flex-row flex-col items-center gap-x-8">
                 <img
@@ -23,7 +23,7 @@ const Unauthorized = () => {
                         requires valid authentication or higher access
                         privileges.
                     </p>
-                    <button onClick={() => navigate('/')} className="w-1/2 lg:w-1/3 py-2 rounded-2xl bg-white text-black shadow-2xl hover:scale-110 transition-all duration-300 hover:bg-black hover:text-white font-semibold">
+                    <button onClick={() => navigate('/')} className="w-1/2 lg:w-1/3 py-2 rounded-2xl bg-white text-black border-2 border-black hover:scale-110 transition-all duration-300 hover:bg-black hover:text-white font-semibold">
                         Back to home
                     </button>
                 </div>

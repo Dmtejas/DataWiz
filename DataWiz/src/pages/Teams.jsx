@@ -209,7 +209,7 @@ const Teams = () => {
     return (
         <div id="teamsPage" className="text-center lg:text-start">
             <Header />
-            <div className="max-w-7xl mx-auto flex flex-col lg:gap-x-0 gap-x-10 gap-4 justify-center pt-20 p-10 text-white">
+            <div className="max-w-7xl mx-auto flex flex-col lg:gap-x-0 gap-x-10 gap-4 justify-center pt-20 p-10 text-black">
                 <h1 className="text-5xl font-bold">Our Team</h1>
                 <p className="text-xl text-black">
                     Behind every initiative of the club is a team driven by
@@ -221,7 +221,7 @@ const Teams = () => {
             <div className="">
                 <TeamCard />
                 <div className="m-10 mt-20">
-                    <div className="lg:w-full w-3/4 mx-auto border border-b-white border-t-0 border-r-0 border-l-0 grid grid-cols-1 lg:grid-cols-6 p-2 lg:p-4 gap-x-1 lg:gap-x-2 lg:gap-y-0 gap-y-8 lg:items-center lg:bg-none">
+                    <div className="lg:w-full w-3/4 mx-auto border border-b-black border-t-0 border-r-0 border-l-0 grid grid-cols-1 lg:grid-cols-6 p-2 lg:p-4 gap-x-1 lg:gap-x-2 lg:gap-y-0 gap-y-8 lg:items-center lg:bg-none">
                         <button onClick={() => {
                             setDomain('Tech')
                         }} 
@@ -230,26 +230,26 @@ const Teams = () => {
                         lg:text-2xl 
                         text-md 
                         font-bold 
-                        ${domain == 'Tech' ? 'lg:bg-transparent shadow-[0_8px_30px_rgba(255,255,255,0.2)] lg:text-white text-black p-2 lg:p-4' : null} 
-                        transition-all duration-300 ease-in-out lg:rounded-3xl rounded-xl lg:hover:text-3xl hover:text-xl lg:bg-transparent bg-transparent text-white lg:text-white`}>
+                        ${domain == 'Tech' ? 'lg:bg-transparent border-2 border-black lg:text-black text-black p-2 lg:p-4' : null} 
+                        transition-all duration-300 ease-in-out lg:rounded-3xl rounded-xl lg:hover:text-3xl hover:text-xl lg:bg-transparent bg-transparent text-black lg:text-black`}>
         
                             Tech
                         </button>
                         <button onClick={() => {
                             setDomain('Design')
-                        }} className={`lg:text-2xl text-md font-bold ${domain == 'Design' ? 'lg:bg-transparent shadow-[0_8px_30px_rgba(255,255,255,0.2)] lg:text-white text-black p-2 lg:p-4' : null} transition-all duration-300 ease-in-out lg:rounded-3xl rounded-xl lg:hover:text-3xl hover:text-xl lg:bg-transparent bg-transparent text-white lg:text-white`}>Design</button>
+                        }} className={`lg:text-2xl text-md font-bold ${domain == 'Design' ? 'lg:bg-transparent border-2 border-black lg:text-black text-black p-2 lg:p-4' : null} transition-all duration-300 ease-in-out lg:rounded-3xl rounded-xl lg:hover:text-3xl hover:text-xl lg:bg-transparent bg-transparent text-black lg:text-black`}>Design</button>
                         <button onClick={() => {
                             setDomain('Media')
-                        }} className={`lg:text-2xl text-md font-bold ${domain == 'Media' ? 'lg:bg-transparent shadow-[0_8px_30px_rgba(255,255,255,0.2)] lg:text-white text-black p-2 lg:p-4' : null} transition-all duration-300 ease-in-out lg:rounded-3xl rounded-xl lg:hover:text-3xl hover:text-xl lg:bg-transparent bg-transparent text-white lg:text-white`}>Media</button>
+                        }} className={`lg:text-2xl text-md font-bold ${domain == 'Media' ? 'lg:bg-transparent border-2 border-black lg:text-black text-black p-2 lg:p-4' : null} transition-all duration-300 ease-in-out lg:rounded-3xl rounded-xl lg:hover:text-3xl hover:text-xl lg:bg-transparent bg-transparent text-black lg:text-black`}>Media</button>
                         <button onClick={() => {
                             setDomain('PR')
-                        }} className={`lg:text-2xl text-md font-bold ${domain == 'PR' ? 'lg:bg-transparent shadow-[0_8px_30px_rgba(255,255,255,0.2)] lg:text-white text-black p-2 lg:p-4' : null} transition-all duration-300 ease-in-out lg:rounded-3xl rounded-xl lg:hover:text-3xl hover:text-xl lg:bg-transparent bg-transparent text-white lg:text-white`}>PR</button>
+                        }} className={`lg:text-2xl text-md font-bold ${domain == 'PR' ? 'lg:bg-transparent border-2 border-black lg:text-black text-black p-2 lg:p-4' : null} transition-all duration-300 ease-in-out lg:rounded-3xl rounded-xl lg:hover:text-3xl hover:text-xl lg:bg-transparent bg-transparent text-black lg:text-black`}>PR</button>
                         <button onClick={() => {
                             setDomain('Events')
-                        }} className={`lg:text-2xl text-md font-bold ${domain == 'Events' ? 'lg:bg-transparent shadow-[0_8px_30px_rgba(255,255,255,0.2)] lg:text-white text-black p-2 lg:p-4' : null} transition-all duration-300 ease-in-out lg:rounded-3xl rounded-xl lg:hover:text-3xl hover:text-xl lg:bg-transparent bg-transparent text-white lg:text-white`}>Events</button>
+                        }} className={`lg:text-2xl text-md font-bold ${domain == 'Events' ? 'lg:bg-transparent border-2 border-black lg:text-black text-black p-2 lg:p-4' : null} transition-all duration-300 ease-in-out lg:rounded-3xl rounded-xl lg:hover:text-3xl hover:text-xl lg:bg-transparent bg-transparent text-black lg:text-black`}>Events</button>
                         <button onClick={() => {
                             setDomain('Documentation')
-                        }} className={`lg:text-2xl text-md font-bold ${domain == 'Documentation' ? 'lg:bg-transparent shadow-[0_8px_30px_rgba(255,255,255,0.2)] lg:text-white text-black p-2 lg:p-4' : null} transition-all duration-300 ease-in-out lg:rounded-3xl rounded-xl lg:hover:text-3xl hover:text-xl lg:bg-transparent bg-transparent text-white lg:text-white`}>Documentation</button>
+                        }} className={`lg:text-2xl text-md font-bold ${domain == 'Documentation' ? 'lg:bg-transparent border-2 border-black lg:text-black text-black p-2 lg:p-4' : null} transition-all duration-300 ease-in-out lg:rounded-3xl rounded-xl lg:hover:text-3xl hover:text-xl lg:bg-transparent bg-transparent text-black lg:text-black`}>Documentation</button>
                     </div>
                     <div>
                         {renderElements()}

@@ -12,6 +12,7 @@ import underline from "../assets/underline.png";
 import { useContext } from "react";
 import { MyContext } from "../context/LoadingContext";
 import { motion } from "framer-motion";
+import '../index.css'
 
 const content = [
     {
@@ -84,11 +85,11 @@ const LandingPage = () => {
             </div> */}
             <Header />
             <main className="mx-auto lg:max-w-7xl">
-                <div className="max-w-7xl mx-auto pt-2 p-4 lg:p-10 lg:pt-0 flex flex-col lg:flex-row lg:space-y-0 z-0 items-center lg:items-center lg:justify-start">
+                <div id="hero" className="w-full mx-auto pt-10 p-4 lg:p-10 lg:pt-0 flex flex-col lg:flex-row lg:space-y-0 z-0 items-center lg:items-center lg:justify-start">
                     <div className="lg:max-w-2xl">
                         <h1
                             id="core-members"
-                            className="text-white text-5xl lg:text-[150px] font-black lg:text-start text-center"
+                            className="text-black text-5xl lg:text-[150px] font-black lg:text-start text-center"
                         >
                             <span className="">
                                 WE ARE, <br></br>
@@ -128,7 +129,7 @@ const LandingPage = () => {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-150px" }}
-                    className="z-20 bg-white max-w-xs lg:max-w-7xl mx-auto hover:scale-105 duration-200 text-black shadow-[24px_12px_48px_rgba(1.5,0,0,0.7)] p-10 flex lg:flex-row flex-col gap-y-2 mt-8"
+                    className="z-20 bg-white max-w-xs lg:max-w-7xl mx-auto hover:scale-105 duration-200 text-black border-2 border-black p-10 flex lg:flex-row flex-col gap-y-2 mt-8"
                 >
                     <div className="lg:w-1/2 w-full flex flex-col justify-center lg:items-start items-center space-y-2">
                         <h1 className="text-lg lg:text-2xl font-semibold">
@@ -152,7 +153,7 @@ const LandingPage = () => {
                         <Button button_name="Gallery" />
                     </div>
                 </motion.div>
-                <div className="m-10 max-w-xs lg:max-w-7xl mx-auto flex items-center justify-center shadow-[24px_12px_48px_rgba(1.5,0,0,0.7)]">
+                <div className="m-10 max-w-xs lg:max-w-7xl mx-auto flex items-center justify-center border-2 border-black lg:px-5">
                     <img
                         className="size-3/4 w-full m-2 lg:m-10 lg:rounded-e-3xl"
                         src={group_photo}
@@ -180,7 +181,7 @@ const LandingPage = () => {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-300px" }} className="relative flex flex-col mt-10 p-10 rounded-2xl max-w-screen-2xl mx-auto space-y-8 bg-transparent">
-                    <h1 className="ml-3 text-center text-3xl lg:text-5xl font-semibold text-white">
+                    <h1 className="ml-3 text-center text-3xl lg:text-5xl font-semibold text-black">
                         Upcoming Events
                     </h1>
                     <div className="flex">
@@ -191,12 +192,12 @@ const LandingPage = () => {
                     </div>
                 </motion.div>
                 <div className="relative z-20 flex flex-col mt-10 p-2 lg:p-10 rounded-2xl max-w-screen-2xl mx-auto space-y-8 bg-transparent">
-                    <h1 className="ml-3 text-3xl lg:text-5xl font-semibold text-white text-center">
+                    <h1 className="ml-3 text-3xl lg:text-5xl font-semibold text-black text-center">
                         Domains
                     </h1>
                     <DomainCard data={domainData} />
                 </div>
-                <div className="max-w-md lg:max-w-7xl mx-auto m-14 text-white flex lg:flex-row flex-col justify-center items-center lg:space-x-28 shadow-[0_8px_30px_rgba(255,255,255,0.2)] lg:p-20 p-2 lg:rounded-s-full gap-y-10 lg:gap-y-0">
+                <div className="max-w-md lg:max-w-7xl mx-auto m-14 text-black flex lg:flex-row flex-col justify-center items-center lg:space-x-28 border-2 border-black lg:p-20 p-2 lg:rounded-s-full gap-y-10 lg:gap-y-0">
                     <h1 className="lg:text-6xl text-2xl font-bold">
                         Our Journey ➨
                     </h1>
@@ -205,7 +206,7 @@ const LandingPage = () => {
                     </div>
                 </div>
                 <div className="text-black">
-                    <h1 className="lg:text-5xl text-2xl mx-2 lg:mx-0 text-center font-bold ml-0 lg:ml-10 text-white">
+                    <h1 className="lg:text-5xl text-2xl mx-2 lg:mx-0 text-center font-semibold ml-0 lg:ml-10 lg:pt-20 lg:pb-10 text-black">
                         Join Our Community
                     </h1>
                     <div className="grid lg:grid-cols-2 lg:grid-rows-none grid-cols-1 lg:gap-20 gap-y-2 mx-10 mt-5 mb-10">

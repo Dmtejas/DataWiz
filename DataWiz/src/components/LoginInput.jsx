@@ -18,6 +18,7 @@ const LoginInput = ({ label, name, value, setFormData}) => {
                 px-2
                 bg-transparent
                 border
+                border-black
                 rounded-md
                 focus:border-4
                 placeholder: text-black

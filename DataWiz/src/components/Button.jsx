@@ -15,7 +15,7 @@ const Button = ({button_name, pathName}) => {
                 }
             })
             
-        }} className="bg-black shadow-2xl text-white font-semibold text-md lg:text-xl transition-all duration-150 hover:bg-purple-950 hover:text-white hover:scale-105 lg:px-32 py-2 rounded-md">{button_name}</button>
+        }} className="bg-transparent border-2 border-black text-black font-semibold text-md lg:text-xl transition-all duration-150 hover:scale-105 lg:px-32 py-2 rounded-md">{button_name}</button>
     )
 }
 

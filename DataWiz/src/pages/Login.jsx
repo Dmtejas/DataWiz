@@ -66,9 +66,9 @@ const Login = () => {
     return (
         <div className="min-h-screen">
             <Header />
-            <div className="max-w-xs lg:max-w-6xl mx-auto py-10 lg:py-10">
+            <div className="max-w-xs lg:max-w-6xl mx-auto py-10 lg:py-10 text-black">
                 <form
-                    className="bg-transparent shadow-[24px_12px_48px_rgba(255,255,255,0.2)] p-4 lg:p-28 flex lg:flex-row flex-col items-center gap-y-8 lg:gap-x-20 lg:rounded-3xl lg:justify-center border"
+                    className="bg-transparent border-2 border-black p-4 lg:p-28 flex lg:flex-row flex-col items-center gap-y-8 lg:gap-x-20 lg:rounded-3xl lg:justify-center "
                     onSubmit={handleSubmit}
                 >
                     <div className="flex flex-col items-center justify-center w-full gap-y-5">
@@ -77,7 +77,7 @@ const Login = () => {
                         <p className="text-center font-thin">Access the dashboard to manage data, monitor activity, and maintain system integrity</p>
                     </div>
                     
-                    <div className="flex flex-col gap-y-6 items-center border py-20 p-8 lg:p-20 rounded-2xl w-full bg-sky-600">
+                    <div className="flex flex-col gap-y-6 items-center border-2 border-black py-20 p-8 lg:p-20 rounded-2xl w-full bg-transparen ">
                         <LoginInput
                             label="Email : "
                             name="email"
@@ -99,6 +99,8 @@ const Login = () => {
                     text-black
                     font-light
                     text-md
+                    border-2
+                    border-black
                     hover:scale-110
                     transition-all
                     duration-200
