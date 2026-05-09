@@ -10,6 +10,7 @@ import RegisterPage from "./pages/RegisterPage";
 import AdminLogin from "./pages/Login.jsx";
 import Unauthorized from "./components/Unauthorized";
 import Dashboard from "./pages/Dashboard.jsx";
+import Login from "./pages/Login.jsx";
 export default function App() {
     const {loading, setLoading} = useContext(MyContext)
     const { button, path } = loading;
@@ -43,7 +44,7 @@ export default function App() {
             },
             {
                 path: "/dashboard",
-                element: <Dashboard />
+                element: <Login />
             },
             {
                 path: "/unauthorized",

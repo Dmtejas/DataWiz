@@ -82,12 +82,12 @@ const RegisterPage = () => {
     return (
         <div id="teamsPage">
             <Header />
-            <h1 className="text-center pt-10 lg:pt-10 text-3xl lg:text-5xl font-semibold text-black">
+            <h1 className="text-center pt-10 lg:pt-10 text-3xl lg:text-5xl font-semibold text-white">
                 Enter your details:{" "}
             </h1>
             <form
                 onSubmit={handleSubmit}
-                className="border-2 border-black max-w-xs lg:max-w-4xl mx-auto mt-6 p-6 lg:p-6 flex flex-col rounded-2xl lg:rounded-2xl mb-20"
+                className="shadow-[0_8px_30px_rgba(255,255,255,0.2)] max-w-xs lg:max-w-4xl mx-auto mt-6 p-6 lg:p-6 flex flex-col rounded-2xl lg:rounded-2xl mb-20"
             >
                 <div className="flex gap-x-4">
                     <InputForForm

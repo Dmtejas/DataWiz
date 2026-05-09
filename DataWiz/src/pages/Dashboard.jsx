@@ -6,7 +6,7 @@ const Dashboard = () => {
     const fetchData = async () => {
         try {
             const apiResponse = await fetch("/api/admin/dashboard", {
-                credentials: true,
+                credentials: 'include',
                 method: "GET",
             });
 
@@ -32,7 +32,7 @@ const Dashboard = () => {
             {
                 data.map((element, index) => {
                     return (
-                        <div className="bg-black m-2 text-center rounded-3xl">
+                        <div key={index} className="bg-black m-2 text-center rounded-3xl">
                             <h1>{element.event}</h1>
                             <h1>{element.name}</h1>
                             <h1>{element.USN}</h1>

@@ -11,7 +11,7 @@ const sessionHandler = session({
     saveUninitialized: false,
 
     store: MongoStore.create({
-        mongoUrl: process.env.MONGO_UR || `mongodb+srv://tejas:tejas123@cluster0.daqsqsc.mongodb.net/DataWiz-Backend`,
+        mongoUrl: `mongodb+srv://tejas:tejas123@cluster0.daqsqsc.mongodb.net/DataWiz-Backend`,
         collectionName: "sessions",
         ttl: 60 * 15,
     }),

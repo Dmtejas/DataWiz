@@ -209,9 +209,9 @@ const Teams = () => {
     return (
         <div id="teamsPage" className="text-center lg:text-start">
             <Header />
-            <div className="max-w-7xl mx-auto flex flex-col lg:gap-x-0 gap-x-10 gap-4 justify-center pt-20 p-10 text-black">
+            <div className="max-w-7xl mx-auto flex flex-col lg:gap-x-0 gap-x-10 gap-4 justify-center pt-20 p-10 text-white">
                 <h1 className="text-5xl font-bold">Our Team</h1>
-                <p className="text-xl text-black">
+                <p className="text-xl text-white">
                     Behind every initiative of the club is a team driven by
                     curiosity, responsibility, and collaboration. Our structure
                     is designed to ensure leadership clarity while empowering
@@ -230,14 +230,14 @@ const Teams = () => {
                         lg:text-2xl 
                         text-md 
                         font-bold 
-                        ${domain == 'Tech' ? 'lg:bg-transparent border-2 border-black lg:text-black text-black p-2 lg:p-4' : null} 
-                        transition-all duration-300 ease-in-out lg:rounded-3xl rounded-xl lg:hover:text-3xl hover:text-xl lg:bg-transparent bg-transparent text-black lg:text-black`}>
+                        ${domain == 'Tech' ? 'lg:bg-transparent border-2 border-black lg:text-white text-black p-2 lg:p-4' : null} 
+                        transition-all duration-300 ease-in-out lg:rounded-3xl rounded-xl lg:hover:text-3xl hover:text-xl lg:bg-transparent bg-transparent text-black lg:text-white`}>
         
                             Tech
                         </button>
                         <button onClick={() => {
                             setDomain('Design')
-                        }} className={`lg:text-2xl text-md font-bold ${domain == 'Design' ? 'lg:bg-transparent border-2 border-black lg:text-black text-black p-2 lg:p-4' : null} transition-all duration-300 ease-in-out lg:rounded-3xl rounded-xl lg:hover:text-3xl hover:text-xl lg:bg-transparent bg-transparent text-black lg:text-black`}>Design</button>
+                        }} className={`lg:text-2xl text-md font-bold ${domain == 'Design' ? 'lg:bg-transparent border-2 border-black lg:text-white text-black p-2 lg:p-4' : null} transition-all duration-300 ease-in-out lg:rounded-3xl rounded-xl lg:hover:text-3xl hover:text-xl lg:bg-transparent bg-transparent text-black lg:text-black`}>Design</button>
                         <button onClick={() => {
                             setDomain('Media')
                         }} className={`lg:text-2xl text-md font-bold ${domain == 'Media' ? 'lg:bg-transparent border-2 border-black lg:text-black text-black p-2 lg:p-4' : null} transition-all duration-300 ease-in-out lg:rounded-3xl rounded-xl lg:hover:text-3xl hover:text-xl lg:bg-transparent bg-transparent text-black lg:text-black`}>Media</button>

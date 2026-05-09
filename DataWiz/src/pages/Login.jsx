@@ -14,7 +14,7 @@ const Login = () => {
     const { loading, setLoading } = useContext(MyContext);
     const { button, path } = loading;
     const [formData, setFormData] = useState(initialFormData);
-    const [status, setStatus] = useState(404);
+    const [status, setStatus] = useState(0);
     // const [error, setError] = useState(false);
 
 
@@ -31,6 +31,7 @@ const Login = () => {
         if (!apiResponse.ok) {
             setStatus(404);
             console.log("Api response is not ok");
+            return;
         }
 
         const message = await apiResponse.json();
@@ -52,6 +53,7 @@ const Login = () => {
                 path: resolveError(),
             };
         });
+
     };
 
 
@@ -62,6 +64,18 @@ const Login = () => {
 
         formDataSubmit();
     };
+
+    const renderResult = () => {
+        if(status == 0) {
+            return;
+        } else if(status == 200) {
+            return <h1>Successfully logged into the system</h1>
+        } else {
+            return (
+                <h1 className="text-red-800">Error logging into the system, Try again with correct credentials or try again later</h1>
+            )
+        }
+    }
 
     return (
         <div className="min-h-screen">
@@ -107,10 +121,11 @@ const Login = () => {
                     hover:bg-black
                     hover:text-white
                 "
-                            type="/submit"
+                            type="submit"
                         >
                             Log in
                         </button>
+                        {renderResult()}
                     </div>
                 </form>
             </div>
