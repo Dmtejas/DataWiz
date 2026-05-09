@@ -13,6 +13,7 @@ body {
     font-family: 'Inter';
     /* background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); */
     background-image: url("./assets/background12.jpg");
+    /* background-color: rgb(75, 180, 200); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

@@ -129,7 +129,7 @@ const LandingPage = () => {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-150px" }}
-                    className="z-20 bg-transparent max-w-xs lg:max-w-7xl mx-auto hover:scale-105 duration-200 text-white p-10 flex lg:flex-row flex-col gap-y-2 mt-8 shadow-[0_8px_30px_rgba(255,255,255,0.2)] rounded-2xl"
+                    className="z-20 bg-transparent max-w-xs lg:max-w-7xl mx-auto hover:scale-105 lg:mt-40 duration-200 text-white p-10 flex lg:flex-row flex-col gap-y-2 mt-8 shadow-[0_8px_30px_rgba(255,255,255,0.2)] rounded-2xl"
                 >
                     <div className="lg:w-1/2 w-full flex flex-col justify-center lg:items-start items-center space-y-2">
                         <h1 className="text-lg lg:text-2xl font-semibold">
